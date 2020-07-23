@@ -1,0 +1,534 @@
+{% extends "base.html" %}
+{% block content %}
+    <br><br>
+    <div class="row">
+        <form method="POST" class="col m8 offset-m2 s10 offset-s1">
+            {% csrf_token %}
+            <div class="input-field">
+                <input type="text" id="name" class="validate">
+                <label for="name">Your Name</label>
+            </div>
+            <br>
+            <div class="question question-1">
+                <h5>Q1. While assigning tasks in a group project, I consider people's skills more of a priority over their interests</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q1" id="q1_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q1" id="q1_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q1" id="q1_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q1" id="q1_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q1" id="q1_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-2">
+                <h5>Q2. During any group task, my usual role is</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q2" id="q2_1" />
+                        <span>To accompolish all tasks myself</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q2" id="q2_2"/>
+                        <span>To outsource available tasks</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q2" id="q2_3"/>
+                        <span>To perform tasks that fascinates me</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q2" id="q2_4"/>
+                        <span>To perform the most crucial tasks myself</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-3">
+                <h5>Q3. When the situation is not in my favour, I usually</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q3" id="q3_1" />
+                        <span>Engage myself in other activities to gain mental peace</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q3" id="q3_2"/>
+                        <span>Analyse the situation and formulate my conclusions</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q3" id="q3_3"/>
+                        <span>Analyse the perspectives from the entire team and then formulate conclusions</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q3" id="q3_4"/>
+                        <span>Take immediate steps to neutralise the entire scenario</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-4">
+                <h5>Q4. The approach I take while heading towards great results is</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q4" id="q4_1" />
+                        <span>To motivate my members to get the best possible results</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q4" id="q4_2"/>
+                        <span>Racing towards results myself to bring recognition to the team</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q4" id="q4_3"/>
+                        <span>Focussing on targets irrespective of the individual who accompolishes it</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q4" id="q4_4"/>
+                        <span>Pushing members to gain results and filling the gap myself</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-5">
+                <h5>Q5. When leading a team, I expect only top notch results</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q5" id="q5_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q5" id="q5_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q5" id="q5_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q5" id="q5_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q5" id="q5_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-6">
+                <h5>Q6. I trust in absolute transparency about myself and my targets with my members in order to boost performance</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q6" id="q6_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q6" id="q6_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q6" id="q6_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q6" id="q6_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q6" id="q6_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-7">
+                <h5>Q7. If I am assigned a leadership role to acheive a certain goal, the methodology I would employ is</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q7" id="q7_1" />
+                        <span>I would make a checklist of the things to be done and start working on them with my team using their strategies</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q7" id="q7_2"/>
+                        <span>I would create a detailed plan to work towards results while monitoring my members</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q7" id="q7_3"/>
+                        <span>I would come up with immediate CTAs and keep changing my plan according to situation</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q7" id="q7_4"/>
+                        <span>I would move straight into execution of the goals and hence work towards achieving them</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q7" id="q7_5"/>
+                        <span>I would conduct ideation spaces and allow my members to come up with plans all on their own to achieve the goals</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-8">
+                <h5>Q8. When I receive critical feedbacks from my members, I usually</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q8" id="q8_1" />
+                        <span>Ignore them</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q8" id="q8_2"/>
+                        <span>Ensure that I incorporate it</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q8" id="q8_3"/>
+                        <span>Analyse it and get a perspective of my TL on it</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q8" id="q8_4"/>
+                        <span>Selectively incorporate the ones I feel are required</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-9">
+                <h5>Q9. When I fail to achieve my targets, I usually</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q9" id="q9_1" />
+                        <span>Replan according to the next phase and work on it</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q9" id="q9_2"/>
+                        <span>Analyse and understand what went wrong and focus on the weaknesses</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q9" id="q9_3"/>
+                        <span>Take ownership of the failure so that my members don't feel it's burden</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q9" id="q9_4"/>
+                        <span>Go for a different opportunity entirely</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q9" id="q9_5"/>
+                        <span>Get demotivated and it usually reflects on people working around me</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-10">
+                <h5>Q10. I give more importance to team morale and bonding than towards strategies and plans</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q10" id="q10_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q10" id="q10_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q10" id="q10_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q10" id="q10_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q10" id="q10_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-11">
+                <h5>Q11. I think that anyone’s personal feelings shouldn't be allowed to get in the way of performance and productivity</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q11" id="q11_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q11" id="q11_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q11" id="q11_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q11" id="q11_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q11" id="q11_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-12">
+                <h5>Q12. When circumstances change, I usually struggle to know what should be my next step</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q12" id="q12_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q12" id="q12_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q12" id="q12_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q12" id="q12_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q12" id="q12_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-13">
+                <h5>Q13. I expect my members to work <strong>harder</strong> than I do towards their objectives</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q13" id="q13_1" />
+                        <span>Strongly Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q13" id="q13_2"/>
+                        <span>Agree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q13" id="q13_3"/>
+                        <span>Neutral</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q13" id="q13_4"/>
+                        <span>Disagree</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q13" id="q13_5"/>
+                        <span>Strongly Disagree</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <div class="question question-14">
+                <h5>Q14. While having a debate on certain issue with my team, I value</h5>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q14" id="q14_1" />
+                        <span>Being right without even being proven</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q14" id="q14_2"/>
+                        <span>Facts, figures and logic to back up my arguments</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q14" id="q14_3"/>
+                        <span>Past Experiences to back up my arguments</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q14" id="q14_4"/>
+                        <span>My ability to question and cross-examine the arguments presented</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" type="radio" name="q14" id="q14_5"/>
+                        <span>The neutrality in my opinion</span>
+                    </label>
+                </p>
+            </div>
+            <br>
+            <center><a class="btn submit-link disabled">VIEW RESULTS</a></center>
+            <div style="height: 100px;"></div>
+        </form>
+    </div>
+{% endblock content %}
+
+{% block tail %}
+    <script>
+        $('a.submit-link').click(function() {
+            var data_dict = {}
+            data_dict['name'] = $('input#name').val();
+            $('div.question').each(function() {
+                var ques_index_class = $(this).attr('class').split(' ')[1];
+                if (ques_index_class) {
+                    var ques_index = ques_index_class.substring(ques_index_class.indexOf('-')+1);
+                    $(`input[name=q${ques_index}]`).each(function() {
+                        if ($(this).is(':checked')) {
+                            data_dict[`q${ques_index}`] = $(this).attr('id').substring($(this).attr('id').indexOf('_')+1)
+                        }
+                    })
+                }
+            })
+            
+            $.ajax({
+                type: 'POST',
+                url: 'ajax/test-submit/',
+                headers: {
+                    'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()
+                },
+                data: data_dict,
+                success: function(data) {
+                    console.log(data);
+                    if (data == -1) {
+                        alert('Something went wrong, please verify');
+                    } else {
+                        window.location.href = `result/${data}/`;
+                    }
+                }
+            })
+        })
+
+        $('input').change(function() {
+            if ($('input#name').val()) {
+                to_be_enabled = true;
+            } else {
+                to_be_enabled = false;
+            }
+            $('div.question').each(function() {
+                var ques_index_class = $(this).attr('class').split(' ')[1];
+                if (ques_index_class) {
+                    var ques_index = ques_index_class.substring(ques_index_class.indexOf('-')+1);
+                    var has_response = false;
+                    $(`input[name=q${ques_index}]`).each(function() {
+                        if ($(this).is(':checked')) {
+                            has_response = true;
+                        }
+                    })
+                    if (has_response == false) {
+                        to_be_enabled = false
+                    }
+                }
+            })
+            if (to_be_enabled == true) {
+                $('a.submit-link').removeClass('disabled');
+            } else {
+                $('a.submit-link').addClass('disabled');
+            }
+        })
+
+    </script>
+{% endblock tail %}
