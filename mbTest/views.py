@@ -193,3 +193,13 @@ def mb_test_view_ajax(request):
 def display_result_view(request, pk):
     mb_response = models.MBResponse.objects.get(pk__exact = pk)
     return render(request, 'mbTest/result_page.html', {'mb_response': mb_response})
+
+
+def display_results_for_eb_view(request):
+    mb_responses = models.MBResponse.objects.all().order_by('name')
+    quadrant_dict = {1:0, 2:0, 3:0, 4:0}
+
+    for mbr in mb_responses:
+        quadrant_dict[mbr.quadrant] += 1 
+
+    return render(request, 'mbTest/results_for_eb.html', {'mb_responses':mb_responses, 'quadrant_dict': quadrant_dict})

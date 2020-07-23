@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <style>
+        td.data-row {
+            border: 1px solid black;
+        }
+        th {
+            border: 2px solid black;
+        }
+    </style>
+{% endblock head %}
+
+{% block content %}
+    <br><br>
+    <div class="container">
+        <table class="striped centered responsive-table">
+            <thead>
+                <tr>
+                    <th>Quadrant Index</th>
+                    <th>Strength</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in quadrant_dict.items %}
+                    <tr>
+                        <td class="data-row">{{ key }}</td>
+                        <td class="data-row">{{ value }}</td>
+                    </tr>
+                {% endfor %}
+                <tr class="green-text text-lighten-5">
+                    <td>///////////////////////</td>
+                    <td>///////////////////////</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <br><br>
+        <table class="striped centered responsive-table">
+            <thead>
+                <tr>
+                    <th>MB Member</th>
+                    <th>Quadrant</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mbr in mb_responses %}
+                    <tr>
+                        <td class="data-row">{{ mbr.name }}</td>
+                        <td class="data-row">{{ mbr.quadrant }}</td>
+                    </tr>
+                {% endfor %}
+                <tr class="green-text text-lighten-5">
+                    <td>///////////////////////</td>
+                    <td>///////////////////////</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
